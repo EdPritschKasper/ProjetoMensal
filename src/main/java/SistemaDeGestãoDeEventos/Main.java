@@ -1,6 +1,7 @@
 package SistemaDeGestãoDeEventos;
 
 import java.util.Scanner;
+import java.time.LocalDateTime;
 
 public class Main {
 
@@ -8,6 +9,16 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         BancoDeDados banco = new BancoDeDados();
+
+         //apenas teste do Evento
+//        LocalDateTime time1 = LocalDateTime.of(2025, 3, 1, 12, 0);
+//        LocalDateTime time2 = LocalDateTime.of(2025, 3, 1, 13, 0);
+//        Palestrante palestrante_1 = new Palestrante("nome", "doc", "tel", "cont");
+//        Participantes participantes_1 = new Participantes("nome", "doc", "wer", "sdf");
+//        Evento evento_1 = new Evento("011", "nome", "desc", time1, time2, new Local());
+//        evento_1.adicionaPalestrante(palestrante_1);
+//        evento_1.adicionaParticipante(participantes_1);
+//        evento_1.getEvento();
 
         while (true){
             //Adicionar o resto dos Cases quando terminarmos o resto
@@ -33,19 +44,7 @@ public class Main {
                     Palestrante conteudo = new Palestrante(nome , documento , telefone , conteudoPalestra);
                 }
 
-
-
-
-
-
             }
-
-
-
         }
-
-
-
     }
-
 }
