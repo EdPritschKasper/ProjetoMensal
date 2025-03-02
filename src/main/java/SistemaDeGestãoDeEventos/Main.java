@@ -9,7 +9,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         BancoDeDados banco = new BancoDeDados();
-
+        int opção;
          //apenas teste do Evento
 //        LocalDateTime time1 = LocalDateTime.of(2025, 3, 1, 12, 0);
 //        LocalDateTime time2 = LocalDateTime.of(2025, 3, 1, 13, 0);
@@ -20,15 +20,19 @@ public class Main {
 //        evento_1.adicionaParticipante(participantes_1);
 //        evento_1.getEvento();
 
-        while (true){
+        do {
             //Adicionar o resto dos Cases quando terminarmos o resto
             System.out.println("Qual a operação desejada");
             System.out.println("1. Cadastrar Paletrante");
             System.out.println("2. Cadastrar Participante");
+            System.out.println("3. Cadastrar Local");
+            System.out.println("4. Cadastrar Evento");
+            System.out.println("0. Encerrar o Programa");
 
 
             System.out.println("Opção: ");
-            int opção = scanner.nextInt();
+            opção = scanner.nextInt();
+            scanner.nextLine();
 
             switch (opção){
 
@@ -42,9 +46,16 @@ public class Main {
                     System.out.println("Qual o Conteudo da Palestra ?");
                     String conteudoPalestra = scanner.nextLine();
                     Palestrante conteudo = new Palestrante(nome , documento , telefone , conteudoPalestra);
+                    break;
                 }
-
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 0:
+                    System.out.println("Encerrando o programa");
+                    break;
             }
-        }
+        } while(opção != 0);
     }
 }
