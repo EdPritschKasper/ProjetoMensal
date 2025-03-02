@@ -10,15 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         BancoDeDados banco = new BancoDeDados();
         int opção;
-         //apenas teste do Evento
-//        LocalDateTime time1 = LocalDateTime.of(2025, 3, 1, 12, 0);
-//        LocalDateTime time2 = LocalDateTime.of(2025, 3, 1, 13, 0);
-//        Palestrante palestrante_1 = new Palestrante("nome", "doc", "tel", "cont");
-//        Participantes participantes_1 = new Participantes("nome", "doc", "wer", "sdf");
-//        Evento evento_1 = new Evento("011", "nome", "desc", time1, time2, new Local());
-//        evento_1.adicionaPalestrante(palestrante_1);
-//        evento_1.adicionaParticipante(participantes_1);
-//        evento_1.getEvento();
+        PreenchimentoBanco.preenche(); // preenche as classes para exemplificar o sistema
 
         do {
             //Adicionar o resto dos Cases quando terminarmos o resto
@@ -29,10 +21,9 @@ public class Main {
             System.out.println("4. Cadastrar Evento");
             System.out.println("0. Encerrar o Programa");
 
-
             System.out.println("Opção: ");
             opção = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // limpa o buffer do scanner para nao pular linha
 
             switch (opção){
 
