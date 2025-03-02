@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public abstract class Evento {
-    protected String evento_id;
+    protected String eventoId;
     protected String nome;
     protected String descricao;
     protected LocalDateTime tempoInicio;
@@ -16,8 +16,8 @@ public abstract class Evento {
     protected Local local;
     protected List<Participante> participantes;
 
-    public Evento(String evento_id, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local) {
-        this.evento_id = evento_id;
+    public Evento(String eventoId, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local) {
+        this.eventoId = eventoId;
         this.nome = nome;
         this.descricao = descricao;
         this.tempoInicio = tempoInicio;
@@ -30,9 +30,13 @@ public abstract class Evento {
         participantes.add(participante);
     }
 
+    public String getEventoId() {
+        return eventoId;
+    }
+
     // apenas teste - printa os atributos do evento
     public void printaEvento() {
-        System.out.println(evento_id);
+        System.out.println(eventoId);
         System.out.println(nome);
         System.out.println(descricao);
         System.out.println(tempoInicio.toLocalDate());// data 1

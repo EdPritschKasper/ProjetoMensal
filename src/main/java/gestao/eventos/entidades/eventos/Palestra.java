@@ -10,8 +10,8 @@ import java.util.List;
 public class Palestra extends Evento{
     private List<Palestrante> palestrantes;
 
-    public Palestra(String evento_id, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local) {
-        super(evento_id, nome, descricao, tempoInicio, tempoFim, local);
+    public Palestra(String eventoId, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local) {
+        super(eventoId, nome, descricao, tempoInicio, tempoFim, local);
         palestrantes = new ArrayList<>();
     }
 

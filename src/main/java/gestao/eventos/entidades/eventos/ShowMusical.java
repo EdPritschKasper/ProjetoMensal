@@ -10,8 +10,8 @@ import java.util.ArrayList;
 public class ShowMusical extends Evento {
     private List<Musico> musicos;
 
-    public ShowMusical(String evento_id, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local){
-        super(evento_id, nome, descricao, tempoInicio, tempoFim, local);
+    public ShowMusical(String eventoId, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local){
+        super(eventoId, nome, descricao, tempoInicio, tempoFim, local);
         musicos = new ArrayList<>();
     }
 

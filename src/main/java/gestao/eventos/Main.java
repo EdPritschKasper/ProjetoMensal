@@ -9,9 +9,11 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        BancoDeDados banco = new BancoDeDados();
+        BancoDeDados banco = BancoDeDados.getInstancia();
         int opção;
-        PreenchimentoBanco.preenche(); // preenche as classes para exemplificar o sistema
+
+
+        PreenchimentoBanco.preenche(banco); // preenche as classes para exemplificar o sistema
 
         do {
             //Adicionar o resto dos Cases quando terminarmos o resto
