@@ -1,11 +1,11 @@
-package SistemaDeGestãoDeEventos;
+package gestao.eventos;
 
-import SistemaDeGestãoDeEventos.entidades.Local;
-import SistemaDeGestãoDeEventos.entidades.eventos.Palestra;
-import SistemaDeGestãoDeEventos.entidades.eventos.ShowMusical;
-import SistemaDeGestãoDeEventos.entidades.pessoas.Musico;
-import SistemaDeGestãoDeEventos.entidades.pessoas.Palestrante;
-import SistemaDeGestãoDeEventos.entidades.pessoas.Participantes;
+import gestao.eventos.entidades.Local;
+import gestao.eventos.entidades.eventos.Palestra;
+import gestao.eventos.entidades.eventos.ShowMusical;
+import gestao.eventos.entidades.pessoas.Musico;
+import gestao.eventos.entidades.pessoas.Palestrante;
+import gestao.eventos.entidades.pessoas.Participante;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +15,7 @@ public class PreenchimentoBanco {
         // classe para que preenche as classes para fazer testes e mostrar exemplos
 
         // PARTICIPANTE
-        Participantes participantes_1 = new Participantes("nomeParticipante", "doc", "wer", "sdf");
+        Participante participante_1 = new Participante("nomeParticipante", "doc", "wer", "sdf");
 
         // PALESTRANTE
         Palestrante palestrante_1 = new Palestrante("nomePalestrante", "doc", "tel", "cont");
@@ -33,12 +33,12 @@ public class PreenchimentoBanco {
         // PALESTRA
         Palestra palestra_1 = new Palestra("011", "nomePalestra", "desc", time_1, time_2, local_1);
         palestra_1.adicionaPalestrante(palestrante_1);
-        palestra_1.adicionaParticipante(participantes_1);
+        palestra_1.adicionaParticipante(participante_1);
 
         // SHOW MUSICAL
         ShowMusical musical_1 = new ShowMusical("012", "nomeMusical", "desc", time_1, time_2, local_1);
         musical_1.adicionaMusico(musico_1);
-        musical_1.adicionaParticipante(participantes_1);
+        musical_1.adicionaParticipante(participante_1);
 
         // printa um evento para exemplo
 //        palestra_1.printaPalestra();

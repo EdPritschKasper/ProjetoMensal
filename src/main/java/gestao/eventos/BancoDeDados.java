@@ -1,8 +1,8 @@
-package SistemaDeGestãoDeEventos;
+package gestao.eventos;
 
-import SistemaDeGestãoDeEventos.entidades.pessoas.CadastroPessoa;
-import SistemaDeGestãoDeEventos.entidades.pessoas.Palestrante;
-import SistemaDeGestãoDeEventos.entidades.pessoas.Participantes;
+import gestao.eventos.entidades.pessoas.Pessoa;
+import gestao.eventos.entidades.pessoas.Palestrante;
+import gestao.eventos.entidades.pessoas.Participante;
 
 import java.util.ArrayList;
 
@@ -10,9 +10,9 @@ public class BancoDeDados {
 
     //Salvar os conteudos desejados
 
-    ArrayList<CadastroPessoa>listaPessoasinfo;
+    ArrayList<Pessoa>listaPessoasinfo;
     ArrayList<Palestrante>listaConteudoPalestra;
-    ArrayList<Participantes> listaNumCadeiras;
+    ArrayList<Participante> listaNumCadeiras;
 
     public BancoDeDados(){
 
@@ -21,7 +21,7 @@ public class BancoDeDados {
         listaNumCadeiras = new ArrayList<>();
     }
 
-    public boolean cadastrarDados(CadastroPessoa pessoainfo){
+    public boolean cadastrarDados(Pessoa pessoainfo){
         return listaPessoasinfo.add(pessoainfo);
 
     }
@@ -30,7 +30,7 @@ public class BancoDeDados {
         return listaConteudoPalestra.add(conteudo);
     }
 
-    public boolean cadastrarNumCadeira(Participantes numCadeira){
+    public boolean cadastrarNumCadeira(Participante numCadeira){
         return listaNumCadeiras.add(numCadeira);
     }
 

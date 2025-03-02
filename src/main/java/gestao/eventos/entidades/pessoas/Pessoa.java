@@ -1,12 +1,12 @@
-package SistemaDeGestãoDeEventos.entidades.pessoas;
+package gestao.eventos.entidades.pessoas;
 
-public class CadastroPessoa {
+public class Pessoa {
 
     private String nome;
     private String documento;
     private String telefone;
 
-    public CadastroPessoa(String nome , String documento , String telefone){
+    public Pessoa(String nome , String documento , String telefone){
 
         this.nome = nome;
         this.documento = documento;

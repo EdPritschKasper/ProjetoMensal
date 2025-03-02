@@ -1,6 +1,6 @@
-package SistemaDeGestãoDeEventos;
+package gestao.eventos;
 
-import SistemaDeGestãoDeEventos.entidades.pessoas.Palestrante;
+import gestao.eventos.entidades.pessoas.Palestrante;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package SistemaDeGestãoDeEventos.entidades;
+package gestao.eventos.entidades;
 
-import SistemaDeGestãoDeEventos.entidades.pessoas.CadastroPessoa;
+import gestao.eventos.entidades.pessoas.Pessoa;
 
 public class Local {
     private String nome;
@@ -9,9 +9,9 @@ public class Local {
     private String cep;
     private String cidade;
     private String estado;
-    private CadastroPessoa pessoa;
+    private Pessoa pessoa;
 
-    public Local(String nome, String rua, String bairro, String cep, String cidade, String estado, CadastroPessoa pessoa) {
+    public Local(String nome, String rua, String bairro, String cep, String cidade, String estado, Pessoa pessoa) {
         this.nome = nome;
         this.rua = rua;
         this.bairro = bairro;

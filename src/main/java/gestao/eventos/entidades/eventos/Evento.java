@@ -1,7 +1,7 @@
-package SistemaDeGestãoDeEventos.entidades.eventos;
+package gestao.eventos.entidades.eventos;
 
-import SistemaDeGestãoDeEventos.entidades.Local;
-import SistemaDeGestãoDeEventos.entidades.pessoas.Participantes;
+import gestao.eventos.entidades.Local;
+import gestao.eventos.entidades.pessoas.Participante;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -14,7 +14,7 @@ public abstract class Evento {
     protected LocalDateTime tempoInicio;
     protected LocalDateTime tempoFim;
     protected Local local;
-    protected List<Participantes> participantes;
+    protected List<Participante> participantes;
 
     public Evento(String evento_id, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local) {
         this.evento_id = evento_id;
@@ -26,7 +26,7 @@ public abstract class Evento {
         this.participantes = new ArrayList<>();
     }
 
-    public void adicionaParticipante(Participantes participante) {
+    public void adicionaParticipante(Participante participante) {
         participantes.add(participante);
     }
 

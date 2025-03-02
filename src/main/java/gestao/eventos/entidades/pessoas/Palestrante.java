@@ -1,6 +1,6 @@
-package SistemaDeGestãoDeEventos.entidades.pessoas;
+package gestao.eventos.entidades.pessoas;
 
-public class Palestrante extends CadastroPessoa {
+public class Palestrante extends Pessoa {
 
     private String conteudoPalestra;
 
