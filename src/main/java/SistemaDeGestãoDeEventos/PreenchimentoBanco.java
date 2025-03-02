@@ -1,5 +1,12 @@
 package SistemaDeGestãoDeEventos;
 
+import SistemaDeGestãoDeEventos.entidades.Local;
+import SistemaDeGestãoDeEventos.entidades.eventos.Palestra;
+import SistemaDeGestãoDeEventos.entidades.eventos.ShowMusical;
+import SistemaDeGestãoDeEventos.entidades.pessoas.Musico;
+import SistemaDeGestãoDeEventos.entidades.pessoas.Palestrante;
+import SistemaDeGestãoDeEventos.entidades.pessoas.Participantes;
+
 import java.time.LocalDateTime;
 
 public class PreenchimentoBanco {

@@ -1,7 +1,8 @@
 package SistemaDeGestãoDeEventos;
 
+import SistemaDeGestãoDeEventos.entidades.pessoas.Palestrante;
+
 import java.util.Scanner;
-import java.time.LocalDateTime;
 
 public class Main {
 

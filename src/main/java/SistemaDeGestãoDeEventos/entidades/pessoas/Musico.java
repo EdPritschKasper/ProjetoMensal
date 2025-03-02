@@ -1,4 +1,4 @@
-package SistemaDeGestãoDeEventos;
+package SistemaDeGestãoDeEventos.entidades.pessoas;
 
 public class Musico extends CadastroPessoa {
 

@@ -1,4 +1,7 @@
-package SistemaDeGestãoDeEventos;
+package SistemaDeGestãoDeEventos.entidades.eventos;
+
+import SistemaDeGestãoDeEventos.entidades.Local;
+import SistemaDeGestãoDeEventos.entidades.pessoas.Palestrante;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

@@ -1,5 +1,9 @@
 package SistemaDeGestãoDeEventos;
 
+import SistemaDeGestãoDeEventos.entidades.pessoas.CadastroPessoa;
+import SistemaDeGestãoDeEventos.entidades.pessoas.Palestrante;
+import SistemaDeGestãoDeEventos.entidades.pessoas.Participantes;
+
 import java.util.ArrayList;
 
 public class BancoDeDados {

@@ -1,4 +1,6 @@
-package SistemaDeGestãoDeEventos;
+package SistemaDeGestãoDeEventos.entidades;
+
+import SistemaDeGestãoDeEventos.entidades.pessoas.CadastroPessoa;
 
 public class Local {
     private String nome;
