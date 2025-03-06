@@ -20,7 +20,6 @@ public class ShowMusical extends Evento {
     }
 
     public void printaMusical() {
-        printaEvento();
         System.out.println(musicos.get(0).getNome());
     }
 }

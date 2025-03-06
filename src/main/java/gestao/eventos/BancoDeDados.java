@@ -106,4 +106,33 @@ public class BancoDeDados {
         }
         return null;
     }
+
+    public Participante getParticipante(String documento){
+        for(Participante participante: participantes){
+            System.out.println(participante.getDocumento());
+            if(participante.getDocumento().equals(documento)) {
+                return participante;
+            }
+        }
+        return null;
+    }
+
+    public Palestrante getPalestrante(String documento){
+        for(Palestrante palestrante: palestrantes){
+            System.out.println(palestrante.getDocumento());
+            if(palestrante.getDocumento().equals(documento)) {
+                return palestrante;
+            }
+        }
+        return null;
+    }
+
+    public Local getLocal(String nome){
+        for(Local local: locais){
+            if(local.getNome().equals(nome)) {
+                return local;
+            }
+        }
+        return null;
+    }
 }

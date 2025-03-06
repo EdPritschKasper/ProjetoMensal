@@ -38,14 +38,14 @@ public class PreenchimentoBanco {
 
         // PALESTRA
         Palestra palestra_1 = new Palestra("011", "nomePalestra", "desc", time_1, time_2, local_1);
-        palestra_1.adicionaPalestrante(palestrante_1);
-        palestra_1.adicionaParticipante(participante_1);
+        palestra_1.adicionaPalestrante("doc");
+        palestra_1.adicionaParticipante("doc");
         banco.adicionaPalestra(palestra_1.getEventoId(), palestra_1);
 
         // SHOW MUSICAL
         ShowMusical musical_1 = new ShowMusical("012", "nomeMusical", "desc", time_1, time_2, local_1);
         musical_1.adicionaMusico(musico_1);
-        musical_1.adicionaParticipante(participante_1);
+        musical_1.adicionaParticipante("doc");
         banco.adicionaShowMusical(musical_1.getEventoId(), musical_1);
 
         // printa um evento para exemplo

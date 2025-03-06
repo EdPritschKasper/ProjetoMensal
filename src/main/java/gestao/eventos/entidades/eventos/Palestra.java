@@ -1,7 +1,9 @@
 package gestao.eventos.entidades.eventos;
 
+import gestao.eventos.BancoDeDados;
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.pessoas.Palestrante;
+import gestao.eventos.entidades.pessoas.Participante;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -15,13 +17,14 @@ public class Palestra extends Evento{
         palestrantes = new ArrayList<>();
     }
 
-    public void adicionaPalestrante(Palestrante palestrante) {
-        palestrantes.add(palestrante);
+    public Palestra(){
+        palestrantes = new ArrayList<>();
     }
 
-    public void printaPalestra() {
-        printaEvento();
-        System.out.println(palestrantes.get(0).getNome());
+    public void adicionaPalestrante(String documento) {
+        BancoDeDados banco = BancoDeDados.getInstancia();
+        palestrantes.add(banco.getPalestrante(documento));
     }
+
 
 }

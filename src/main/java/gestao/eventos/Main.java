@@ -4,6 +4,8 @@ import gestao.eventos.entidades.eventos.*;
 import gestao.eventos.entidades.pessoas.*;
 import gestao.eventos.entidades.*;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Main {
@@ -13,8 +15,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         BancoDeDados banco = BancoDeDados.getInstancia();
         int opção;
-        Local local = new Local();
-
 
         PreenchimentoBanco.preenche(banco); // preenche as classes para exemplificar o sistema
 
@@ -24,7 +24,8 @@ public class Main {
             System.out.println("1. Cadastrar Paletrante");
             System.out.println("2. Cadastrar Participante");
             System.out.println("3. Cadastrar Local");
-            System.out.println("4. Cadastrar Evento");
+            System.out.println("4. Cadastrar Palestra");
+            System.out.println("5. Cadastrar Show Musical");
             System.out.println("0. Encerrar o Programa");
 
             System.out.println("Opção: ");
@@ -48,6 +49,7 @@ public class Main {
                 case 2:
                     break;
                 case 3:
+                    Local local = new Local();
                     System.out.println("Insira o nome do local : ");
                     local.setNome(scanner.nextLine());
                     System.out.println("Insira a rua : ");
@@ -62,7 +64,50 @@ public class Main {
                     local.setEstado(scanner.nextLine());
                     System.out.println("Insira o documento da Pessoa : ");
                     local.setPessoa(scanner.nextLine());
+                    banco.adicionaLocal(local);
                     break;
+                case 4:
+                    int opcaoPalestra = 0;
+
+                    Palestra palestra = new Palestra();
+                    System.out.println("Insira o nome da Palestra : ");
+                    palestra.setNome(scanner.nextLine());
+                    System.out.println("Insira o id : ");
+                    palestra.setEventoId(scanner.nextLine());
+                    System.out.println("Insira a descricao : ");
+                    palestra.setDescricao(scanner.nextLine());
+                    System.out.println("Insira o tempo de inicio : "); //2025-03-06T14:30:00
+                    palestra.setTempoInicio(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+                    System.out.println("Insira o tempo de fim : ");
+                    palestra.setTempoFim(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+                    System.out.println("Insira o nome do local : ");
+                    palestra.setLocal(scanner.nextLine());
+                    System.out.println("Insira agora os participantes e Palestrantes : ");
+
+                    do{
+                        System.out.println("1 - Adicionar um Participante: ");
+                        System.out.println("2 - Adicionar um Palestrante: ");
+                        System.out.println("0 - Encerrar cadastro de evento: ");
+                        opcaoPalestra = scanner.nextInt();
+                        scanner.nextLine();
+
+                        switch(opcaoPalestra) {
+                            case 1:
+                                System.out.println("Digite o documento do Participante ");
+                                palestra.adicionaParticipante(scanner.nextLine());
+                                break;
+                            case 2:
+                                System.out.println("Digite o documento do Palestrante ");
+                                palestra.adicionaPalestrante(scanner.nextLine());
+                                break;
+                            case 0:
+                                System.out.println("Concluindo cadastro de evento");
+                                break;
+                        }
+
+                    } while(opcaoPalestra != 0);
+                    break;
+                case 5:
                 case 0:
                     System.out.println("Encerrando o programa");
                     break;

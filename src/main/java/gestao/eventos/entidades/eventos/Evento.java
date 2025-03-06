@@ -2,6 +2,7 @@ package gestao.eventos.entidades.eventos;
 
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.pessoas.Participante;
+import gestao.eventos.BancoDeDados;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -26,22 +27,61 @@ public abstract class Evento {
         this.participantes = new ArrayList<>();
     }
 
-    public void adicionaParticipante(Participante participante) {
-        participantes.add(participante);
+    public Evento(){
+        this.participantes = new ArrayList<>();
+    }
+
+    public void adicionaParticipante(String documento) {
+        BancoDeDados banco = BancoDeDados.getInstancia();
+        participantes.add(banco.getParticipante(documento));
     }
 
     public String getEventoId() {
         return eventoId;
     }
 
-    // apenas teste - printa os atributos do evento
-    public void printaEvento() {
-        System.out.println(eventoId);
-        System.out.println(nome);
-        System.out.println(descricao);
-        System.out.println(tempoInicio.toLocalDate());// data 1
-        System.out.println(tempoFim.toLocalTime());// hora 2
-        System.out.println(local.getNome());
-        System.out.println(participantes.get(0).getNome());
+    public void setEventoId(String eventoId) {
+        this.eventoId = eventoId;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public LocalDateTime getTempoInicio() {
+        return tempoInicio;
+    }
+
+    public void setTempoInicio(LocalDateTime tempoInicio) {
+        this.tempoInicio = tempoInicio;
+    }
+
+    public LocalDateTime getTempoFim() {
+        return tempoFim;
+    }
+
+    public void setTempoFim(LocalDateTime tempoFim) {
+        this.tempoFim = tempoFim;
+    }
+
+    public Local getLocal() {
+        return local;
+    }
+
+    public void setLocal(String nome) {
+        BancoDeDados banco = BancoDeDados.getInstancia();
+        this.local = banco.getLocal(nome);
     }
 }
