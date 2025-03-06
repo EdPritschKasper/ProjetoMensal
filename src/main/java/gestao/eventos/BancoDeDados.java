@@ -96,4 +96,14 @@ public class BancoDeDados {
         showsMusicais.put(id, showMusical);
     }
 
+    //---------- GETTERS ----------//
+    public Pessoa getPessoa(String documento){
+        for(Pessoa pessoa: pessoas){
+            System.out.println(pessoa.getDocumento());
+            if(pessoa.getDocumento().equals(documento)) {
+                return pessoa;
+            }
+        }
+        return null;
+    }
 }

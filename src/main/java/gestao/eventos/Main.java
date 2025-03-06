@@ -1,6 +1,8 @@
 package gestao.eventos;
 
-import gestao.eventos.entidades.pessoas.Palestrante;
+import gestao.eventos.entidades.eventos.*;
+import gestao.eventos.entidades.pessoas.*;
+import gestao.eventos.entidades.*;
 
 import java.util.Scanner;
 
@@ -11,6 +13,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         BancoDeDados banco = BancoDeDados.getInstancia();
         int opção;
+        Local local = new Local();
 
 
         PreenchimentoBanco.preenche(banco); // preenche as classes para exemplificar o sistema
@@ -45,6 +48,20 @@ public class Main {
                 case 2:
                     break;
                 case 3:
+                    System.out.println("Insira o nome do local : ");
+                    local.setNome(scanner.nextLine());
+                    System.out.println("Insira a rua : ");
+                    local.setRua(scanner.nextLine());
+                    System.out.println("Insira bairro : ");
+                    local.setBairro(scanner.nextLine());
+                    System.out.println("Insira cep : ");
+                    local.setCep(scanner.nextLine());
+                    System.out.println("Insira a cidade : ");
+                    local.setCidade(scanner.nextLine());
+                    System.out.println("Insira o estado : ");
+                    local.setEstado(scanner.nextLine());
+                    System.out.println("Insira o documento da Pessoa : ");
+                    local.setPessoa(scanner.nextLine());
                     break;
                 case 0:
                     System.out.println("Encerrando o programa");
