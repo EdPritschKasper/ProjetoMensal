@@ -17,6 +17,7 @@ public abstract class Evento {
     protected Local local;
     protected List<Participante> participantes;
 
+    // CONSTRUTORES
     public Evento(String eventoId, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local) {
         this.eventoId = eventoId;
         this.nome = nome;
@@ -35,6 +36,8 @@ public abstract class Evento {
         BancoDeDados banco = BancoDeDados.getInstancia();
         participantes.add(banco.getParticipante(documento));
     }
+
+    public abstract void adicionaApresentador(String documento);
 
     public String getEventoId() {
         return eventoId;
@@ -64,12 +67,22 @@ public abstract class Evento {
         return tempoInicio;
     }
 
+    // POLIMORFISMO - SOBRECARGA - SET TEMPO INICIO
+    public void setTempoInicio(int ano, int mes, int dia, int hora, int minuto) {
+        this.tempoInicio = LocalDateTime.of(ano, mes, dia, hora, minuto);
+    }
+
     public void setTempoInicio(LocalDateTime tempoInicio) {
         this.tempoInicio = tempoInicio;
     }
 
     public LocalDateTime getTempoFim() {
         return tempoFim;
+    }
+
+    // POLIMORFISMO - SOBRECARGA - SET TEMPO FIM
+    public void setTempoFim(int ano, int mes, int dia, int hora, int minuto) {
+        this.tempoFim = LocalDateTime.of(ano, mes, dia, hora, minuto);
     }
 
     public void setTempoFim(LocalDateTime tempoFim) {

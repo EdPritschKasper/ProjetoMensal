@@ -21,7 +21,7 @@ public class ShowMusical extends Evento {
         musicos = new ArrayList<>();
     }
 
-    public void adicionaMusico(String documento) {
+    public void adicionaApresentador(String documento) {
         BancoDeDados banco = BancoDeDados.getInstancia();
         musicos.add(banco.getMusico(documento));
     }

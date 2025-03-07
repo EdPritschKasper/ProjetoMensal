@@ -103,7 +103,7 @@ public class Main {
                                 break;
                             case 2:
                                 System.out.println("Digite o documento do Palestrante ");
-                                palestra.adicionaPalestrante(scanner.nextLine());
+                                palestra.adicionaApresentador(scanner.nextLine());
                                 break;
                             case 0:
                                 System.out.println("Concluindo cadastro de evento");
@@ -144,7 +144,7 @@ public class Main {
                                 break;
                             case 2:
                                 System.out.println("Digite o documento do Musico ");
-                                showMusical.adicionaMusico(scanner.nextLine());
+                                showMusical.adicionaApresentador(scanner.nextLine());
                                 break;
                             case 0:
                                 System.out.println("Concluindo cadastro de evento");

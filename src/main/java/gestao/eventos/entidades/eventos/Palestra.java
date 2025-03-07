@@ -22,10 +22,8 @@ public class Palestra extends Evento{
         palestrantes = new ArrayList<>();
     }
 
-    public void adicionaPalestrante(String documento) {
+    public void adicionaApresentador(String documento) {
         BancoDeDados banco = BancoDeDados.getInstancia();
         palestrantes.add(banco.getPalestrante(documento));
     }
-
-
 }
