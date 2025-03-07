@@ -33,13 +33,15 @@ public class PreenchimentoBanco {
         banco.adicionaLocal(local_1);
 
         // DATA E HORA (palestra)
-        LocalDateTime time_1 = LocalDateTime.of(2025, 3, 1, 12, 0);
+        LocalDateTime time_1 = LocalDateTime.of(2025, 3, 8, 12, 0);
         LocalDateTime time_2 = LocalDateTime.of(2025, 3, 1, 13, 0);
 
         // PALESTRA
         Palestra palestra_1 = new Palestra("011", "nomePalestra", "desc", time_1, time_2, local_1);
         palestra_1.adicionaApresentador("doc");
         palestra_1.adicionaParticipante("doc");
+//        palestra_1.adicionaParticipante("doc");
+//        palestra_1.adicionaParticipante("doc");
         banco.adicionaPalestra(palestra_1.getEventoId(), palestra_1);
 
         // SHOW MUSICAL
@@ -48,6 +50,9 @@ public class PreenchimentoBanco {
         musical_1.adicionaParticipante("doc");
         banco.adicionaShowMusical(musical_1.getEventoId(), musical_1);
 
+        System.out.println(palestra_1.getStatusEvento());
+        palestra_1.checaStatusEvento();
+        System.out.println(palestra_1.getStatusEvento());
 //        palestra_1.printaAtributos();
 //        participante_1.printaAtributos();
 //        palestrante_1.printaAtributos();

@@ -22,6 +22,7 @@ public class Pessoa implements IPrinta {
         telefone = pessoa.telefone;
     }
 
+    // metodo interface IPrinta
     public void printaAtributos(){
         System.out.println("Nome: " + getNome());
         System.out.println("Documento: " + getDocumento());

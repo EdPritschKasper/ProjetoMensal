@@ -25,6 +25,7 @@ public class Local implements IPrinta {
 
     public Local(){}
 
+    // metodo interface IPrinta
     public void printaAtributos(){
         System.out.println("Nome: " + getNome());
         System.out.println("Rua: " + getRua());

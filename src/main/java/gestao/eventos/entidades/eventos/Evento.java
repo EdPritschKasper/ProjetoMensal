@@ -2,14 +2,16 @@ package gestao.eventos.entidades.eventos;
 
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.pessoas.Participante;
-import gestao.eventos.BancoDeDados;
+import gestao.eventos.*;
+import gestao.eventos.interfaces.IChecaEvento;
 import gestao.eventos.interfaces.IPrinta;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.ArrayList;
 
-public abstract class Evento implements IPrinta {
+public abstract class Evento implements IPrinta, IChecaEvento {
     protected String eventoId;
     protected String nome;
     protected String descricao;
@@ -17,8 +19,9 @@ public abstract class Evento implements IPrinta {
     protected LocalDateTime tempoFim;
     protected Local local;
     protected List<Participante> participantes;
+    protected StatusEvento statusEvento;
 
-    // CONSTRUTORES
+    // construtor parametrizado
     public Evento(String eventoId, String nome, String descricao, LocalDateTime tempoInicio, LocalDateTime tempoFim, Local local) {
         this.eventoId = eventoId;
         this.nome = nome;
@@ -27,10 +30,13 @@ public abstract class Evento implements IPrinta {
         this.tempoFim = tempoFim;
         this.local = local;
         this.participantes = new ArrayList<>();
+        this.statusEvento = StatusEvento.PENDENTE;
     }
 
+    // construtor padrao
     public Evento(){
         this.participantes = new ArrayList<>();
+        this.statusEvento = StatusEvento.PENDENTE;
     }
 
     public void adicionaParticipante(String documento) {
@@ -38,8 +44,10 @@ public abstract class Evento implements IPrinta {
         participantes.add(banco.getParticipante(documento));
     }
 
+    // metodo abstrato
     public abstract void adicionaApresentador(String documento);
 
+    // metodo interface IPrinta
     public void printaAtributos() {
         System.out.println("ID: " + getEventoId());
         System.out.println("Nome: " + getNome());
@@ -47,6 +55,27 @@ public abstract class Evento implements IPrinta {
         System.out.println("Tempo Inicio: " + getTempoInicio());
         System.out.println("Tempo Fim: " + getTempoFim());
         System.out.println("Quantidade de participantes: " + participantes.size());
+    }
+
+    // metodo interface IChecaEvento
+    public void checaStatusEvento(){
+        long diasAteInicio = ChronoUnit.DAYS.between(
+                LocalDateTime.now().toLocalDate(),
+                this.tempoInicio.toLocalDate()
+        );
+        if(diasAteInicio <= 7 && participantes.size() <= 2) {
+            setStatusEvento(StatusEvento.CANCELADO);
+        } else {
+            setStatusEvento(StatusEvento.CONFIRMADO);
+        }
+    }
+
+    public void setStatusEvento(StatusEvento statusEvento){
+        this.statusEvento = statusEvento;
+    }
+
+    public StatusEvento getStatusEvento() {
+        return this.statusEvento;
     }
 
     public String getEventoId() {
