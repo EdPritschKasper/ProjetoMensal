@@ -13,6 +13,13 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
+    // construtor de copia
+    public Pessoa(Pessoa pessoa){
+        nome = pessoa.nome;
+        documento = pessoa.documento;
+        telefone = pessoa.telefone;
+    }
+
     public String getNome() {
         return this.nome;
     }

@@ -20,12 +20,15 @@ public class Main {
 
         do {
             //Adicionar o resto dos Cases quando terminarmos o resto
+            // CADASTROS
             System.out.println("Qual a operação desejada");
-            System.out.println("1. Cadastrar Paletrante");
+            System.out.println("1. Cadastrar Palestrante");
             System.out.println("2. Cadastrar Participante");
-            System.out.println("3. Cadastrar Local");
-            System.out.println("4. Cadastrar Palestra");
-            System.out.println("5. Cadastrar Show Musical");
+            System.out.println("3. Cadastrar Musico");
+            System.out.println("4. Cadastrar Local");
+            System.out.println("5. Cadastrar Palestra");
+            System.out.println("6. Cadastrar Show Musical");
+            // OPERACOES DE DELETAR, VIZUALIZAR E TALVEZ ATUALIZAR
             System.out.println("0. Encerrar o Programa");
 
             System.out.println("Opção: ");
@@ -49,6 +52,8 @@ public class Main {
                 case 2:
                     break;
                 case 3:
+                    break;
+                case 4: // CADASTRA LOCAL
                     Local local = new Local();
                     System.out.println("Insira o nome do local : ");
                     local.setNome(scanner.nextLine());
@@ -66,7 +71,7 @@ public class Main {
                     local.setPessoa(scanner.nextLine());
                     banco.adicionaLocal(local);
                     break;
-                case 4:
+                case 5: //CADASTRA PALESTRA
                     int opcaoPalestra = 0;
 
                     Palestra palestra = new Palestra();
@@ -107,7 +112,7 @@ public class Main {
 
                     } while(opcaoPalestra != 0);
                     break;
-                case 5:
+                case 7: //CADASTRA SHOW MUSICAL
                     int opcaoShow = 0;
 
                     ShowMusical showMusical = new ShowMusical();
