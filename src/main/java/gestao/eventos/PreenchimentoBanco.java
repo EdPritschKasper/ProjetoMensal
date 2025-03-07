@@ -44,7 +44,7 @@ public class PreenchimentoBanco {
 
         // SHOW MUSICAL
         ShowMusical musical_1 = new ShowMusical("012", "nomeMusical", "desc", time_1, time_2, local_1);
-        musical_1.adicionaMusico(musico_1);
+        musical_1.adicionaMusico("doc");
         musical_1.adicionaParticipante("doc");
         banco.adicionaShowMusical(musical_1.getEventoId(), musical_1);
 

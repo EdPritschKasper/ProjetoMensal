@@ -18,6 +18,7 @@ public class Palestra extends Evento{
     }
 
     public Palestra(){
+        super();
         palestrantes = new ArrayList<>();
     }
 

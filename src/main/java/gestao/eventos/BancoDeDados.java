@@ -127,6 +127,16 @@ public class BancoDeDados {
         return null;
     }
 
+    public Musico getMusico(String documento){
+        for(Musico musico: musicos){
+            System.out.println(musico.getDocumento());
+            if(musico.getDocumento().equals(documento)) {
+                return musico;
+            }
+        }
+        return null;
+    }
+
     public Local getLocal(String nome){
         for(Local local: locais){
             if(local.getNome().equals(nome)) {

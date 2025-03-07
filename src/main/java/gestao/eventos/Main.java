@@ -108,6 +108,46 @@ public class Main {
                     } while(opcaoPalestra != 0);
                     break;
                 case 5:
+                    int opcaoShow = 0;
+
+                    ShowMusical showMusical = new ShowMusical();
+                    System.out.println("Insira o nome do Show Musical : ");
+                    showMusical.setNome(scanner.nextLine());
+                    System.out.println("Insira o id : ");
+                    showMusical.setEventoId(scanner.nextLine());
+                    System.out.println("Insira a descricao : ");
+                    showMusical.setDescricao(scanner.nextLine());
+                    System.out.println("Insira o tempo de inicio : "); //2025-03-06T14:30:00
+                    showMusical.setTempoInicio(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+                    System.out.println("Insira o tempo de fim : ");
+                    showMusical.setTempoFim(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+                    System.out.println("Insira o nome do local : ");
+                    showMusical.setLocal(scanner.nextLine());
+                    System.out.println("Insira agora os participantes e Musicos : ");
+
+                    do{
+                        System.out.println("1 - Adicionar um Participante: ");
+                        System.out.println("2 - Adicionar um Musico: ");
+                        System.out.println("0 - Encerrar cadastro de evento: ");
+                        opcaoShow = scanner.nextInt();
+                        scanner.nextLine();
+
+                        switch(opcaoShow) {
+                            case 1:
+                                System.out.println("Digite o documento do Participante ");
+                                showMusical.adicionaParticipante(scanner.nextLine());
+                                break;
+                            case 2:
+                                System.out.println("Digite o documento do Musico ");
+                                showMusical.adicionaMusico(scanner.nextLine());
+                                break;
+                            case 0:
+                                System.out.println("Concluindo cadastro de evento");
+                                break;
+                        }
+
+                    } while(opcaoShow != 0);
+                    break;
                 case 0:
                     System.out.println("Encerrando o programa");
                     break;

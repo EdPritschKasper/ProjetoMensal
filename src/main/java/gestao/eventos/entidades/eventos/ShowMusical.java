@@ -1,5 +1,6 @@
 package gestao.eventos.entidades.eventos;
 
+import gestao.eventos.BancoDeDados;
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.pessoas.Musico;
 
@@ -15,8 +16,14 @@ public class ShowMusical extends Evento {
         musicos = new ArrayList<>();
     }
 
-    public void adicionaMusico(Musico musico) {
-        musicos.add(musico);
+    public ShowMusical(){
+        super();
+        musicos = new ArrayList<>();
+    }
+
+    public void adicionaMusico(String documento) {
+        BancoDeDados banco = BancoDeDados.getInstancia();
+        musicos.add(banco.getMusico(documento));
     }
 
     public void printaMusical() {
