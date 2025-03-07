@@ -2,8 +2,9 @@ package gestao.eventos.entidades;
 
 import gestao.eventos.entidades.pessoas.Pessoa;
 import gestao.eventos.BancoDeDados;
+import gestao.eventos.interfaces.*;
 
-public class Local {
+public class Local implements IPrinta {
     private String nome;
     private String rua;
     private String bairro;
@@ -23,6 +24,15 @@ public class Local {
     }
 
     public Local(){}
+
+    public void printaAtributos(){
+        System.out.println("Nome: " + getNome());
+        System.out.println("Rua: " + getRua());
+        System.out.println("Bairro: " + getBairro());
+        System.out.println("Cep: " + getCep());
+        System.out.println("Cidade: " + getCidade());
+        System.out.println("Estado: " + getEstado());
+    }
 
     public String getNome() {
         return nome;

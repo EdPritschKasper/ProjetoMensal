@@ -3,12 +3,13 @@ package gestao.eventos.entidades.eventos;
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.pessoas.Participante;
 import gestao.eventos.BancoDeDados;
+import gestao.eventos.interfaces.IPrinta;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 
-public abstract class Evento {
+public abstract class Evento implements IPrinta {
     protected String eventoId;
     protected String nome;
     protected String descricao;
@@ -38,6 +39,15 @@ public abstract class Evento {
     }
 
     public abstract void adicionaApresentador(String documento);
+
+    public void printaAtributos() {
+        System.out.println("ID: " + getEventoId());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Descricao: " + getDescricao());
+        System.out.println("Tempo Inicio: " + getTempoInicio());
+        System.out.println("Tempo Fim: " + getTempoFim());
+        System.out.println("Quantidade de participantes: " + participantes.size());
+    }
 
     public String getEventoId() {
         return eventoId;

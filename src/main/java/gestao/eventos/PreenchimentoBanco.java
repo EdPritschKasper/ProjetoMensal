@@ -48,9 +48,9 @@ public class PreenchimentoBanco {
         musical_1.adicionaParticipante("doc");
         banco.adicionaShowMusical(musical_1.getEventoId(), musical_1);
 
-        // printa um evento para exemplo
-//        palestra_1.printaPalestra();
-//        musical_1.printaMusical();
+//        palestra_1.printaAtributos();
+//        participante_1.printaAtributos();
+//        palestrante_1.printaAtributos();
+//        local_1.printaAtributos();
     }
-
 }

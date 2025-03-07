@@ -1,6 +1,8 @@
 package gestao.eventos.entidades.pessoas;
 
-public class Pessoa {
+import gestao.eventos.interfaces.*;
+
+public class Pessoa implements IPrinta {
 
     private String nome;
     private String documento;
@@ -18,6 +20,12 @@ public class Pessoa {
         nome = pessoa.nome;
         documento = pessoa.documento;
         telefone = pessoa.telefone;
+    }
+
+    public void printaAtributos(){
+        System.out.println("Nome: " + getNome());
+        System.out.println("Documento: " + getDocumento());
+        System.out.println("Telefone: " + getTelefone());
     }
 
     public String getNome() {
