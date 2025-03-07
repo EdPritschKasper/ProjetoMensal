@@ -106,7 +106,6 @@ public class Main {
                                 palestra.adicionaApresentador(scanner.nextLine());
                                 break;
                             case 0:
-                                System.out.println("Concluindo cadastro de evento");
                                 break;
                         }
 
@@ -147,7 +146,6 @@ public class Main {
                                 showMusical.adicionaApresentador(scanner.nextLine());
                                 break;
                             case 0:
-                                System.out.println("Concluindo cadastro de evento");
                                 break;
                         }
 

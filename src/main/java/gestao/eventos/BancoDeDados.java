@@ -99,7 +99,6 @@ public class BancoDeDados {
     //---------- GETTERS ----------//
     public Pessoa getPessoa(String documento){
         for(Pessoa pessoa: pessoas){
-            System.out.println(pessoa.getDocumento());
             if(pessoa.getDocumento().equals(documento)) {
                 return pessoa;
             }
@@ -109,7 +108,6 @@ public class BancoDeDados {
 
     public Participante getParticipante(String documento){
         for(Participante participante: participantes){
-            System.out.println(participante.getDocumento());
             if(participante.getDocumento().equals(documento)) {
                 return participante;
             }
@@ -119,7 +117,6 @@ public class BancoDeDados {
 
     public Palestrante getPalestrante(String documento){
         for(Palestrante palestrante: palestrantes){
-            System.out.println(palestrante.getDocumento());
             if(palestrante.getDocumento().equals(documento)) {
                 return palestrante;
             }
@@ -129,7 +126,6 @@ public class BancoDeDados {
 
     public Musico getMusico(String documento){
         for(Musico musico: musicos){
-            System.out.println(musico.getDocumento());
             if(musico.getDocumento().equals(documento)) {
                 return musico;
             }
