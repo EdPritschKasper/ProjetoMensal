@@ -15,6 +15,9 @@ public class ControleOpcoes {
     private ControleOpcoes() {
         opcoes = new HashMap<>();
         opcoes.put("cadastra palestrante", CadastraPalestrante.getInstancia());
+        opcoes.put("cadastra local", CadastraLocal.getInstancia());
+        opcoes.put("cadastra palestra", CadastraPalestra.getInstancia());
+        opcoes.put("cadastra show musical", CadastraShowMusical.getInstancia());
     }
 
     // Singleton - retorna uma unica instancia atraves de metodo statico
@@ -25,7 +28,7 @@ public class ControleOpcoes {
         return instancia;
     }
 
-    public Opcao getOpcao(String key){
-        return opcoes.get(key);
+    public Opcao getOpcao(String nomeOperacao){
+        return opcoes.get(nomeOperacao);
     }
 }
