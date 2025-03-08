@@ -1,7 +1,7 @@
 package gestao.eventos.entidades;
 
 import gestao.eventos.entidades.pessoas.Pessoa;
-import gestao.eventos.BancoDeDados;
+import gestao.eventos.config.BancoDeDados;
 import gestao.eventos.interfaces.*;
 
 public class Local implements IPrinta {

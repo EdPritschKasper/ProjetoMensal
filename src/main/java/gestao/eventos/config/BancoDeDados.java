@@ -1,4 +1,4 @@
-package gestao.eventos;
+package gestao.eventos.config;
 
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.eventos.Palestra;

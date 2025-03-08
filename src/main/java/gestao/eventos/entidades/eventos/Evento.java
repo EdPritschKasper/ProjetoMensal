@@ -1,8 +1,9 @@
 package gestao.eventos.entidades.eventos;
 
+import gestao.eventos.config.BancoDeDados;
+import gestao.eventos.config.StatusEvento;
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.pessoas.Participante;
-import gestao.eventos.*;
 import gestao.eventos.interfaces.IChecaEvento;
 import gestao.eventos.interfaces.IPrinta;
 

@@ -1,8 +1,10 @@
 package gestao.eventos;
 
+import gestao.eventos.config.BancoDeDados;
+import gestao.eventos.config.PreenchimentoBanco;
 import gestao.eventos.entidades.eventos.*;
-import gestao.eventos.entidades.pessoas.*;
 import gestao.eventos.entidades.*;
+import gestao.eventos.opcoes.ControleOpcoes;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -17,18 +19,28 @@ public class Main {
         int opção;
 
         PreenchimentoBanco.preenche(banco); // preenche as classes para exemplificar o sistema
+        ControleOpcoes controleOpcoes = ControleOpcoes.getInstancia();
 
         do {
             //Adicionar o resto dos Cases quando terminarmos o resto
             // CADASTROS
             System.out.println("Qual a operação desejada");
-            System.out.println("1. Cadastrar Palestrante");
-            System.out.println("2. Cadastrar Participante");
+            System.out.println("1 - Cadastrar Palestrante");
+            System.out.println("1 Cadastrar Participante");
             System.out.println("3. Cadastrar Musico");
             System.out.println("4. Cadastrar Local");
             System.out.println("5. Cadastrar Palestra");
             System.out.println("6. Cadastrar Show Musical");
-            // OPERACOES DE DELETAR, VIZUALIZAR E TALVEZ ATUALIZAR
+            System.out.println("7. Exibir Participantes");
+            System.out.println("8. Exibir Palestrantes");
+            System.out.println("9. Exibir Musicos");
+            System.out.println("10. Exibir Locais");
+            System.out.println("11. Exibir Palestras");
+            System.out.println("12. Exibir Show Musicais");
+            System.out.println("13. Deletar Participante");
+            System.out.println("14. Deletar Palestra");
+            System.out.println("15. Alterar Participante");
+            System.out.println("16. Alterar Palestra");
             System.out.println("0. Encerrar o Programa");
 
             System.out.println("Opção: ");
@@ -38,15 +50,7 @@ public class Main {
             switch (opção){
 
                 case 1:{
-                    System.out.println("Qual o nome do palestrante ? : ");
-                    String nome = scanner.nextLine();
-                    System.out.println("Qual o documento ? : ");
-                    String documento = scanner.nextLine();
-                    System.out.println("Qual o telefone do palestrante");
-                    String telefone = scanner.nextLine();
-                    System.out.println("Qual o Conteudo da Palestra ?");
-                    String conteudoPalestra = scanner.nextLine();
-                    Palestrante conteudo = new Palestrante(nome , documento , telefone , conteudoPalestra);
+                    controleOpcoes.getOpcao("cadastra palestrante").executaOpcao();
                     break;
                 }
                 case 2:
@@ -110,6 +114,8 @@ public class Main {
                         }
 
                     } while(opcaoPalestra != 0);
+
+                    banco.adicionaPalestra(palestra.getEventoId(), palestra);
                     break;
                 case 7: //CADASTRA SHOW MUSICAL
                     int opcaoShow = 0;
@@ -150,6 +156,8 @@ public class Main {
                         }
 
                     } while(opcaoShow != 0);
+
+                    banco.adicionaShowMusical(showMusical.getEventoId(), showMusical);
                     break;
                 case 0:
                     System.out.println("Encerrando o programa");

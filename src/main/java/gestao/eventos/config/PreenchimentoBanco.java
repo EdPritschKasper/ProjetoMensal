@@ -1,4 +1,4 @@
-package gestao.eventos;
+package gestao.eventos.config;
 
 import gestao.eventos.entidades.Local;
 import gestao.eventos.entidades.eventos.*;
@@ -50,9 +50,9 @@ public class PreenchimentoBanco {
         musical_1.adicionaParticipante("doc");
         banco.adicionaShowMusical(musical_1.getEventoId(), musical_1);
 
-        System.out.println(palestra_1.getStatusEvento());
-        palestra_1.checaStatusEvento();
-        System.out.println(palestra_1.getStatusEvento());
+//        System.out.println(palestra_1.getStatusEvento());
+//        palestra_1.checaStatusEvento();
+//        System.out.println(palestra_1.getStatusEvento());
 //        palestra_1.printaAtributos();
 //        participante_1.printaAtributos();
 //        palestrante_1.printaAtributos();
