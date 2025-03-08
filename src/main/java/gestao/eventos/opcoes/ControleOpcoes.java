@@ -7,6 +7,7 @@ import gestao.eventos.opcoes.cadastro.*;
 //import gestao.eventos.opcoes.exibe.*;
 import gestao.eventos.opcoes.cases.CaseCadastro;
 import gestao.eventos.opcoes.cases.CaseExibe;
+import gestao.eventos.opcoes.cases.CaseRemove;
 
 public class ControleOpcoes {
     private static ControleOpcoes instancia;
@@ -16,6 +17,7 @@ public class ControleOpcoes {
         opcoes = new HashMap<>();
         opcoes.put("case cadastra", CaseCadastro.getInstancia());
         opcoes.put("case exibe", CaseExibe.getInstancia());
+        opcoes.put("case remove", CaseRemove.getInstancia());
         opcoes.put("cadastra palestrante", CadastraPalestrante.getInstancia());
         opcoes.put("cadastra local", CadastraLocal.getInstancia());
         opcoes.put("cadastra palestra", CadastraPalestra.getInstancia());

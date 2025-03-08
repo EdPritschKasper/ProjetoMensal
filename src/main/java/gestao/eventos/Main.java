@@ -36,10 +36,9 @@ public class Main {
                     break;
                 case 2:// Opção de Exibir
                     controleOpcoes.getOpcao("case exibe").executaOpcao();
-                    System.out.println("exibir");
                     break;
                 case 3:// Opção de Remover
-                    System.out.println("remover");
+                    controleOpcoes.getOpcao("case remove").executaOpcao();
                     break;
                 case 4: // Opção de Alterar
                     System.out.println("alterar");

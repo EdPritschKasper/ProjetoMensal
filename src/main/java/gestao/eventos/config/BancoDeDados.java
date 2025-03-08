@@ -96,7 +96,7 @@ public class BancoDeDados {
         showsMusicais.put(id, showMusical);
     }
 
-    //---------- GETTERS ----------//
+    //-------------- GET
     public Pessoa getPessoa(String documento){
         for(Pessoa pessoa: pessoas){
             if(pessoa.getDocumento().equals(documento)) {
@@ -142,6 +142,7 @@ public class BancoDeDados {
         return null;
     }
 
+    //--------------PRINTA ALL
     public void printaAllParticipantes(){
         for(Participante participante: participantes){
             System.out.println("Nome: " + participante.getNome() + " Documento: " + participante.getDocumento());
@@ -182,5 +183,16 @@ public class BancoDeDados {
             System.out.println("ID: " + id + " Nome: " + showMusical.getNome());
         });
         System.out.println("Qtda: " + showsMusicais.size());
+    }
+
+    //--------------REMOVE
+    public boolean removeParticipante(String documento) {
+        for(int i = 0; i < participantes.size(); i++){
+            if(participantes.get(i).getDocumento().equals(documento)){
+                participantes.remove(i);
+                return true;
+            }
+        }
+        return false;
     }
 }
