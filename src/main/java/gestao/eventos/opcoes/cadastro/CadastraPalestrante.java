@@ -2,7 +2,6 @@ package gestao.eventos.opcoes.cadastro;
 
 import java.util.Scanner;
 import gestao.eventos.entidades.pessoas.Palestrante;
-import gestao.eventos.interfaces.IOpcao;
 import gestao.eventos.config.*;
 import gestao.eventos.opcoes.Opcao;
 
@@ -17,7 +16,6 @@ public class CadastraPalestrante extends Opcao {
         return instancia;
     }
 
-    // metodo concreto de IOpcao
     public void executaOpcao(){
 
         Scanner scanner = VariaveisGlobais.getInstancia().getScanner();

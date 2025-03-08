@@ -2,11 +2,11 @@ package gestao.eventos.opcoes;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.HashSet;
 
 import gestao.eventos.opcoes.cadastro.*;
 //import gestao.eventos.opcoes.exibe.*;
-import gestao.eventos.opcoes.Opcao;
+import gestao.eventos.opcoes.cases.CaseCadastro;
+import gestao.eventos.opcoes.cases.CaseExibe;
 
 public class ControleOpcoes {
     private static ControleOpcoes instancia;
@@ -14,6 +14,8 @@ public class ControleOpcoes {
 
     private ControleOpcoes() {
         opcoes = new HashMap<>();
+        opcoes.put("case cadastra", CaseCadastro.getInstancia());
+        opcoes.put("case exibe", CaseExibe.getInstancia());
         opcoes.put("cadastra palestrante", CadastraPalestrante.getInstancia());
         opcoes.put("cadastra local", CadastraLocal.getInstancia());
         opcoes.put("cadastra palestra", CadastraPalestra.getInstancia());

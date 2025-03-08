@@ -20,7 +20,6 @@ public class CadastraPalestra extends Opcao {
         return instancia;
     }
 
-    // metodo concreto de IOpcao
     public void executaOpcao(){
         Scanner scanner = VariaveisGlobais.getInstancia().getScanner();
         BancoDeDados bancoDeDados = BancoDeDados.getInstancia();

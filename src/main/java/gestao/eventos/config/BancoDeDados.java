@@ -141,4 +141,46 @@ public class BancoDeDados {
         }
         return null;
     }
+
+    public void printaAllParticipantes(){
+        for(Participante participante: participantes){
+            System.out.println("Nome: " + participante.getNome() + " Documento: " + participante.getDocumento());
+        }
+        System.out.println("Qtda: " + participantes.size());
+    }
+
+    public void printaAllPalestrantes(){
+        for(Palestrante palestrante: palestrantes){
+            System.out.println("Nome: " + palestrante.getNome() + " Documento: " + palestrante.getDocumento());
+        }
+        System.out.println("Qtda: " + palestrantes.size());
+    }
+
+    public void printaAllMusicos(){
+        for(Musico musico: musicos){
+            System.out.println("Nome: " + musico.getNome() + " Documento: " + musico.getDocumento());
+        }
+        System.out.println("Qtda: " + musicos.size());
+    }
+
+    public void printaAllLocais(){
+        for(Local local: locais){
+            System.out.println("Nome: " + local.getNome());
+        }
+        System.out.println("Qtda: " + locais.size());
+    }
+
+    public void printaAllPalestras(){
+        palestras.forEach((id, palestra) -> {
+            System.out.println("ID: " + id + " Nome: " + palestra.getNome());
+        });
+        System.out.println("Qtda: " + palestras.size());
+    }
+
+    public void printaAllShowsMusicais(){
+        showsMusicais.forEach((id, showMusical) -> {
+            System.out.println("ID: " + id + " Nome: " + showMusical.getNome());
+        });
+        System.out.println("Qtda: " + showsMusicais.size());
+    }
 }
