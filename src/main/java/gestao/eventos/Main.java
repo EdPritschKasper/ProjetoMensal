@@ -41,7 +41,7 @@ public class Main {
                     controleOpcoes.getOpcao("case remove").executaOpcao();
                     break;
                 case 4: // Opção de Alterar
-                    System.out.println("alterar");
+                    controleOpcoes.getOpcao("case altera").executaOpcao();
                     break;
                 case 0:
                     System.out.println("Encerrando o programa");

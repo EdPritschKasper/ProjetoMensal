@@ -3,8 +3,10 @@ package gestao.eventos.opcoes;
 import java.util.HashMap;
 import java.util.Map;
 
+import gestao.eventos.opcoes.altera.AlteraLocal;
 import gestao.eventos.opcoes.cadastro.*;
 //import gestao.eventos.opcoes.exibe.*;
+import gestao.eventos.opcoes.cases.CaseAltera;
 import gestao.eventos.opcoes.cases.CaseCadastro;
 import gestao.eventos.opcoes.cases.CaseExibe;
 import gestao.eventos.opcoes.cases.CaseRemove;
@@ -18,10 +20,13 @@ public class ControleOpcoes {
         opcoes.put("case cadastra", CaseCadastro.getInstancia());
         opcoes.put("case exibe", CaseExibe.getInstancia());
         opcoes.put("case remove", CaseRemove.getInstancia());
+        opcoes.put("case altera", CaseAltera.getInstancia());
         opcoes.put("cadastra palestrante", CadastraPalestrante.getInstancia());
         opcoes.put("cadastra local", CadastraLocal.getInstancia());
         opcoes.put("cadastra palestra", CadastraPalestra.getInstancia());
         opcoes.put("cadastra show musical", CadastraShowMusical.getInstancia());
+        opcoes.put("altera local", AlteraLocal.getInstancia());
+
     }
 
     // Singleton - retorna uma unica instancia atraves de metodo statico

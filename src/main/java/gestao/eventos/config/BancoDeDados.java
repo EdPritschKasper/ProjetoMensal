@@ -29,13 +29,6 @@ public class BancoDeDados {
     private Map<String, ShowMusical> showsMusicais;
     private static BancoDeDados instancia;
 
-//    public BancoDeDados(){
-//
-//        listaPessoasinfo = new ArrayList<>();
-//        listaConteudoPalestra = new ArrayList<>();
-//        listaNumCadeiras = new ArrayList<>();
-//    }
-
     private BancoDeDados() {
         pessoas = new ArrayList<>();
         participantes = new ArrayList<>();
@@ -45,19 +38,6 @@ public class BancoDeDados {
         palestras = new HashMap<>();
         showsMusicais = new HashMap<>();
     }
-
-//    public boolean cadastrarDados(Pessoa pessoainfo){
-//        return listaPessoasinfo.add(pessoainfo);
-//
-//    }
-//
-//    public boolean cadastrarConteudo(Palestrante conteudo){
-//        return listaConteudoPalestra.add(conteudo);
-//    }
-//
-//    public boolean cadastrarNumCadeira(Participante numCadeira){
-//        return listaNumCadeiras.add(numCadeira);
-//    }
 
     // Singleton - retorna uma unica instancia statica do banco
     public static BancoDeDados getInstancia() {
@@ -195,4 +175,54 @@ public class BancoDeDados {
         }
         return false;
     }
+
+    public boolean removePalestrante(String documento) {
+        for(int i = 0; i < palestrantes.size(); i++){
+            if(palestrantes.get(i).getDocumento().equals(documento)){
+                palestrantes.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean removeMusico(String documento) {
+        for(int i = 0; i < musicos.size(); i++){
+            if(musicos.get(i).getDocumento().equals(documento)){
+                musicos.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean removeLocal(String nome) {
+        for(int i = 0; i < locais.size(); i++){
+            if(locais.get(i).getNome().equals(nome)){
+                locais.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean removePalestra(String idEvento) {
+        return palestras.remove(idEvento, palestras.get(idEvento));
+    }
+
+    public boolean removeShowMusical(String idEvento) {
+        return showsMusicais.remove(idEvento, showsMusicais.get(idEvento));
+    }
+
+    //--------------ALTERA
+    public boolean alteraLocal(String nomeLocal, Local local){
+        for(int i=0; i < locais.size(); i++){
+            if(locais.get(i).getNome().equals(nomeLocal)){
+                locais.get(i).copiaAtributos(local);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

@@ -13,6 +13,7 @@ public class Local implements IPrinta {
     private String estado;
     private Pessoa pessoa;
 
+    // construtor parametrizado
     public Local(String nome, String rua, String bairro, String cep, String cidade, String estado, Pessoa pessoa) {
         this.nome = nome;
         this.rua = rua;
@@ -23,7 +24,18 @@ public class Local implements IPrinta {
         this.pessoa = pessoa;
     }
 
+    // construtor padrão
     public Local(){}
+
+    public void copiaAtributos(Local local){
+        this.nome = local.nome;
+        this.rua = local.rua;
+        this.bairro = local.bairro;
+        this.cep = local.cep;
+        this.cidade = local.cidade;
+        this.estado = local.estado;
+        this.pessoa = local.pessoa;
+    }
 
     // metodo interface IPrinta
     public void printaAtributos(){

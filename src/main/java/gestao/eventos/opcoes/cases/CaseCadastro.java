@@ -56,7 +56,7 @@ public class CaseCadastro extends Opcao {
                     controleOpcoes.getOpcao("cadastra show musical").executaOpcao();
                     break;
                 case 0:// Sair da Opção de Cadastro
-                    System.out.println("Saindo do cadastro");
+                    System.out.println("Saindo do Menu Cadastro");
                     break;
                 default:// Opção Inválida
                     System.out.println("Opção inválida");
