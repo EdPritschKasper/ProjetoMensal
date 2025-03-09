@@ -13,15 +13,15 @@ public class PreenchimentoBanco {
         // classe que preenche as entidades para fazer testes e mostrar exemplos
 
         // PESSOA
-        Pessoa pessoa_1 = new Participante("nomePessoa", "doc", "wer", "sdf");
-        banco.adicionaPessoa(pessoa_1);
+//        Pessoa pessoa_1 = new Participante("nomePessoa", "doc", "wer");
+//        banco.adicionaPessoa(pessoa_1);
 
         // PARTICIPANTE
-        Participante participante_1 = new Participante("nomeParticipante", "doc", "wer", "sdf");
+        Participante participante_1 = new Participante("nomeParticipante", "doc", "wer");
         banco.adicionaParticipante(participante_1);
 
         // PALESTRANTE
-        Palestrante palestrante_1 = new Palestrante("nomePalestrante", "doc", "tel", "cont");
+        Palestrante palestrante_1 = new Palestrante("nomePalestrante", "doc", "tel");
         banco.adicionaPalestrante(palestrante_1);
 
         // MUSICO

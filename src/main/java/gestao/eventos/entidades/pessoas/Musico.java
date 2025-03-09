@@ -6,4 +6,5 @@ public class Musico extends Pessoa {
         super(nome, documento, telefone);
     }
 
+    public Musico(){super();}
 }

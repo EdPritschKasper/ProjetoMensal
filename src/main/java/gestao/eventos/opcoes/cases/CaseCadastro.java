@@ -38,13 +38,13 @@ public class CaseCadastro extends Opcao {
 
             switch (opcao) {
                 case 1: // Cadastra Participante
-                    System.out.println("cadastra participante");
+                    controleOpcoes.getOpcao("cadastra participante").executaOpcao();
                     break;
                 case 2:// Cadastra Palestrante
                     controleOpcoes.getOpcao("cadastra palestrante").executaOpcao();
                     break;
                 case 3:// Cadastra Músico
-                    System.out.println("cadastra musico");
+                    controleOpcoes.getOpcao("cadastra musico").executaOpcao();
                     break;
                 case 4:// Cadastra Local
                     controleOpcoes.getOpcao("cadastra local").executaOpcao();

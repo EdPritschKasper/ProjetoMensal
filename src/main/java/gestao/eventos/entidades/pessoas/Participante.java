@@ -1,17 +1,16 @@
 package gestao.eventos.entidades.pessoas;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Participante extends Pessoa {
 
-    private String numCadeira;
 
-
-    public Participante(String nome , String documento , String telefone , String numCadeira){
+    public Participante(String nome , String documento , String telefone){
         super(nome, documento, telefone);
-        this.numCadeira = numCadeira;
-
     }
 
-    public String getNumCadeira() {
-        return numCadeira;
+    public Participante(){
+        super();
     }
 }

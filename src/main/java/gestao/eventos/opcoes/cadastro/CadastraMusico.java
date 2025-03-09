@@ -1,17 +1,17 @@
 package gestao.eventos.opcoes.cadastro;
 
 import java.util.Scanner;
-import gestao.eventos.entidades.pessoas.Palestrante;
+import gestao.eventos.entidades.pessoas.Musico;
 import gestao.eventos.config.*;
 import gestao.eventos.opcoes.Opcao;
 
-public class CadastraPalestrante extends Opcao {
-    private static CadastraPalestrante instancia;
+public class CadastraMusico extends Opcao {
+    private static CadastraMusico instancia;
 
     // Singleton - retorna uma unica instancia atraves de metodo statico
-    public static CadastraPalestrante getInstancia(){
+    public static CadastraMusico getInstancia(){
         if(instancia == null) {
-            instancia = new CadastraPalestrante();
+            instancia = new CadastraMusico();
         }
         return instancia;
     }
@@ -28,7 +28,7 @@ public class CadastraPalestrante extends Opcao {
         System.out.println("Insira o telefone: ");
         String telefone = scanner.nextLine();
 
-        Palestrante palestrante = new Palestrante(nome, documento, telefone);
-        bancoDeDados.adicionaPalestrante(palestrante);
+        Musico musico = new Musico(nome, documento, telefone);
+        bancoDeDados.adicionaMusico(musico);
     }
 }
