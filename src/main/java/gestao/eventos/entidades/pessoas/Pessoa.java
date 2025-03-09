@@ -59,4 +59,22 @@ public class Pessoa implements IPrinta {
     public String getTelefone() {
         return this.telefone;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public void copiaAtributos(Pessoa pessoa){
+        nome = pessoa.getNome();
+        documento = pessoa.getDocumento();
+        telefone = pessoa.getTelefone();
+    }
 }

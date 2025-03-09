@@ -17,7 +17,6 @@ public class CadastraMusico extends Opcao {
     }
 
     public void executaOpcao(){
-
         Scanner scanner = VariaveisGlobais.getInstancia().getScanner();
         BancoDeDados bancoDeDados = BancoDeDados.getInstancia();
 

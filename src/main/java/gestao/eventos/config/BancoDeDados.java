@@ -122,6 +122,14 @@ public class BancoDeDados {
         return null;
     }
 
+    public Palestra getPalestra(String idEvento){
+        return palestras.get(idEvento);
+    }
+
+    public ShowMusical getShowMusical(String idEvento){
+        return showsMusicais.get(idEvento);
+    }
+
     //--------------PRINTA ALL
     public void printaAllParticipantes(){
         for(Participante participante: participantes){
@@ -215,14 +223,48 @@ public class BancoDeDados {
     }
 
     //--------------ALTERA
-    public boolean alteraLocal(String nomeLocal, Local local){
+    public void alteraParticipante(String documento, Participante participante){
+        for(int i=0; i < participantes.size(); i++){
+            if(participantes.get(i).getDocumento().equals(documento)){
+                participantes.get(i).copiaAtributos(participante);
+//                participantes.set(i, participante);
+                System.out.println("Participante Alterado com sucesso");
+            }
+        }
+    }
+
+    public void alteraPalestrante(String documento, Palestrante palestrante){
+        for(int i=0; i < palestrantes.size(); i++){
+            if(palestrantes.get(i).getDocumento().equals(documento)){
+                palestrantes.get(i).copiaAtributos(palestrante);
+                System.out.println("Palestrante Alterado com sucesso");
+            }
+        }
+    }
+
+    public void alteraMusico(String documento, Musico musico){
+        for(int i=0; i < musicos.size(); i++){
+            if(musicos.get(i).getDocumento().equals(documento)){
+                musicos.get(i).copiaAtributos(musico);
+                System.out.println("Musico Alterado com sucesso");
+            }
+        }
+    }
+
+    public void alteraLocal(String nomeLocal, Local local){
         for(int i=0; i < locais.size(); i++){
             if(locais.get(i).getNome().equals(nomeLocal)){
                 locais.get(i).copiaAtributos(local);
-                return true;
+                System.out.println("Local Alterado com sucesso");
             }
         }
-        return false;
     }
 
+    public void alteraPalestra(String idEvento, Palestra palestra){
+        palestras.get(idEvento).copiaAtributos(palestra);
+    }
+
+    public void alteraShowMusical(String idEvento, ShowMusical showMusical){
+        showsMusicais.get(idEvento).copiaAtributos(showMusical);
+    }
 }

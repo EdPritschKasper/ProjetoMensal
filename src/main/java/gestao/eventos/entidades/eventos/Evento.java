@@ -71,6 +71,17 @@ public abstract class Evento implements IPrinta, IChecaEvento {
         }
     }
 
+    public void copiaAtributos(Evento evento) {
+        this.eventoId = evento.getEventoId();
+        this.nome = evento.getNome();
+        this.descricao = evento.getDescricao();
+        this.tempoInicio = evento.getTempoInicio();
+        this.tempoFim = evento.getTempoFim();
+        this.local = evento.getLocal();
+        this.participantes = evento.getParticipantes();
+        this.statusEvento = evento.getStatusEvento();
+    }
+
     public void setStatusEvento(StatusEvento statusEvento){
         this.statusEvento = statusEvento;
     }
@@ -136,5 +147,9 @@ public abstract class Evento implements IPrinta, IChecaEvento {
     public void setLocal(String nome) {
         BancoDeDados banco = BancoDeDados.getInstancia();
         this.local = banco.getLocal(nome);
+    }
+
+    public List<Participante> getParticipantes() {
+        return participantes;
     }
 }

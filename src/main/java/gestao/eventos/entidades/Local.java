@@ -28,13 +28,13 @@ public class Local implements IPrinta {
     public Local(){}
 
     public void copiaAtributos(Local local){
-        this.nome = local.nome;
-        this.rua = local.rua;
-        this.bairro = local.bairro;
-        this.cep = local.cep;
-        this.cidade = local.cidade;
-        this.estado = local.estado;
-        this.pessoa = local.pessoa;
+        this.nome = local.getNome();
+        this.rua = local.getRua();
+        this.bairro = local.getBairro();
+        this.cep = local.getCep();
+        this.cidade = local.getCidade();
+        this.estado = local.getEstado();
+        this.pessoa = local.getPessoa();
     }
 
     // metodo interface IPrinta

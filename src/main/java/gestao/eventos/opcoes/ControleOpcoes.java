@@ -5,11 +5,9 @@ import java.util.Map;
 
 import gestao.eventos.opcoes.altera.AlteraLocal;
 import gestao.eventos.opcoes.cadastro.*;
-//import gestao.eventos.opcoes.exibe.*;
-import gestao.eventos.opcoes.cases.CaseAltera;
-import gestao.eventos.opcoes.cases.CaseCadastro;
-import gestao.eventos.opcoes.cases.CaseExibe;
-import gestao.eventos.opcoes.cases.CaseRemove;
+import gestao.eventos.opcoes.altera.*;
+import gestao.eventos.opcoes.cases.*;
+
 
 // Classe que carrega todas as opções dentro dos switch cases
 public class ControleOpcoes {
@@ -33,7 +31,12 @@ public class ControleOpcoes {
         opcoes.put("cadastra show musical", CadastraShowMusical.getInstancia());
 
         // Opções de alteração
+        opcoes.put("altera participante", AlteraParticipante.getInstancia());
+        opcoes.put("altera palestrante", AlteraPalestrante.getInstancia());
+        opcoes.put("altera musico", AlteraMusico.getInstancia());
         opcoes.put("altera local", AlteraLocal.getInstancia());
+        opcoes.put("altera palestra", AlteraPalestra.getInstancia());
+        opcoes.put("altera show musical", AlteraShowMusical.getInstancia());
     }
 
     // Singleton - retorna uma unica instancia atraves de metodo statico

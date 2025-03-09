@@ -23,7 +23,6 @@ public class Main {
             System.out.println("3 - Remover");
             System.out.println("4 - Alterar");
 
-
             System.out.println("Opção: ");
             opcao = scanner.nextInt();
             scanner.nextLine(); // limpa o buffer do scanner para nao pular linha
