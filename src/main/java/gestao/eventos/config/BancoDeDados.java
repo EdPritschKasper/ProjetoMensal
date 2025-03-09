@@ -17,9 +17,6 @@ public class BancoDeDados {
 
     //Salvar os conteudos desejados
 
-//    ArrayList<Pessoa>listaPessoasinfo;
-//    ArrayList<Palestrante>listaConteudoPalestra;
-//    ArrayList<Participante> listaNumCadeiras;
     private List<Pessoa> pessoas;
     private List<Participante> participantes;
     private List<Palestrante> palestrantes;
@@ -133,21 +130,21 @@ public class BancoDeDados {
     //--------------PRINTA ALL
     public void printaAllParticipantes(){
         for(Participante participante: participantes){
-            System.out.println("Nome: " + participante.getNome() + " Documento: " + participante.getDocumento());
+            System.out.println("Nome: " + participante.getNome() + "/ Documento: " + participante.getDocumento());
         }
         System.out.println("Qtda: " + participantes.size());
     }
 
     public void printaAllPalestrantes(){
         for(Palestrante palestrante: palestrantes){
-            System.out.println("Nome: " + palestrante.getNome() + " Documento: " + palestrante.getDocumento());
+            System.out.println("Nome: " + palestrante.getNome() + "/ Documento: " + palestrante.getDocumento());
         }
         System.out.println("Qtda: " + palestrantes.size());
     }
 
     public void printaAllMusicos(){
         for(Musico musico: musicos){
-            System.out.println("Nome: " + musico.getNome() + " Documento: " + musico.getDocumento());
+            System.out.println("Nome: " + musico.getNome() + "/ Documento: " + musico.getDocumento());
         }
         System.out.println("Qtda: " + musicos.size());
     }
@@ -161,14 +158,14 @@ public class BancoDeDados {
 
     public void printaAllPalestras(){
         palestras.forEach((id, palestra) -> {
-            System.out.println("ID: " + id + " Nome: " + palestra.getNome());
+            System.out.println("ID: " + id + "/ Nome: " + palestra.getNome());
         });
         System.out.println("Qtda: " + palestras.size());
     }
 
     public void printaAllShowsMusicais(){
         showsMusicais.forEach((id, showMusical) -> {
-            System.out.println("ID: " + id + " Nome: " + showMusical.getNome());
+            System.out.println("ID: " + id + "/ Nome: " + showMusical.getNome());
         });
         System.out.println("Qtda: " + showsMusicais.size());
     }

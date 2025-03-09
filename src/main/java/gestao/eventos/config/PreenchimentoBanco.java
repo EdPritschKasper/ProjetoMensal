@@ -17,12 +17,18 @@ public class PreenchimentoBanco {
 //        banco.adicionaPessoa(pessoa_1);
 
         // PARTICIPANTE
-        Participante participante_1 = new Participante("nomeParticipante", "doc", "wer");
+        Participante participante_1 = new Participante("Rodrigo", "965.115.388.12", "(40) 985865255");
         banco.adicionaParticipante(participante_1);
 
+        Participante participante_2 = new Participante("Nilce", "065.915.332.48", "(50) 956778931");
+        banco.adicionaParticipante(participante_2);
+
         // PALESTRANTE
-        Palestrante palestrante_1 = new Palestrante("nomePalestrante", "doc", "tel");
+        Palestrante palestrante_1 = new Palestrante("Adalberto", "801.772.897.90", "(78) 984625471");
         banco.adicionaPalestrante(palestrante_1);
+
+        Palestrante palestrante_2 = new Palestrante("Olivia", "209.752.591.42", "(78) 984625471");
+        banco.adicionaPalestrante(palestrante_2);
 
         // MUSICO
         Musico musico_1 = new Musico("nomeMusico", "doc", "tel");
