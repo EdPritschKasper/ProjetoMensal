@@ -44,8 +44,8 @@ public class PreenchimentoBanco {
 
         // PALESTRA
         Palestra palestra_1 = new Palestra("011", "nomePalestra", "desc", time_1, time_2, local_1);
-        palestra_1.adicionaApresentador("doc");
-        palestra_1.adicionaParticipante("doc");
+        palestra_1.adicionaApresentador("801.772.897.90");
+        palestra_1.adicionaParticipante("965.115.388.12");
 //        palestra_1.adicionaParticipante("doc");
 //        palestra_1.adicionaParticipante("doc");
         banco.adicionaPalestra(palestra_1.getEventoId(), palestra_1);

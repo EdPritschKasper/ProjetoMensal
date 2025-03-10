@@ -146,7 +146,8 @@ public class BancoDeDados {
 
     public void printaAllMusicos(){
         for(Musico musico: musicos){
-            System.out.println("Nome: " + musico.getNome() + "/ Documento: " + musico.getDocumento());
+            System.out.println("Nome: " + musico.getNome() + "/ Documento: " + musico.getDocumento() +
+                    "/ Tel: " + musico.getTelefone());
         }
         System.out.println("Qtda: " + musicos.size());
     }
