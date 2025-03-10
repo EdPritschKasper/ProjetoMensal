@@ -44,6 +44,7 @@ public class CaseRemove extends Opcao {
                     System.out.println("Digite o documento do Participante");
                     documento = scanner.nextLine();
                     resultado = bancoDeDados.removeParticipante(documento) ? "Participante removido com sucesso" : "Participante não encontrado";
+                    System.out.println(resultado);
                     break;
                 case 2:// Remove Palestrante
                     System.out.println("Digite o documento do Palestrante");
