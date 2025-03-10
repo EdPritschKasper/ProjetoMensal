@@ -31,11 +31,11 @@ public class PreenchimentoBanco {
         banco.adicionaPalestrante(palestrante_2);
 
         // MUSICO
-        Musico musico_1 = new Musico("nomeMusico", "doc", "tel");
+        Musico musico_1 = new Musico("Robertinho", "777.897.918.80", "(95) 9037254721");
         banco.adicionaMusico(musico_1);
 
         // LOCAL
-        Local local_1 = new Local("nomeLocal", "rua", "bairro", "cep", "cid", "est", palestrante_1);
+        Local local_1 = new Local("Charrua", "Cassiano Ricador", "Portes", "85865155", "Foz do iguaçu", "Paraná", palestrante_1);
         banco.adicionaLocal(local_1);
 
         // DATA E HORA (palestra)
@@ -51,7 +51,7 @@ public class PreenchimentoBanco {
         banco.adicionaPalestra(palestra_1.getEventoId(), palestra_1);
 
         // SHOW MUSICAL
-        ShowMusical musical_1 = new ShowMusical("012", "nomeMusical", "desc", time_1, time_2, local_1);
+        ShowMusical musical_1 = new ShowMusical("012", "Rei leão", "desc", time_1, time_2, local_1);
         musical_1.adicionaApresentador("doc");
         musical_1.adicionaParticipante("doc");
         banco.adicionaShowMusical(musical_1.getEventoId(), musical_1);

@@ -130,14 +130,16 @@ public class BancoDeDados {
     //--------------PRINTA ALL
     public void printaAllParticipantes(){
         for(Participante participante: participantes){
-            System.out.println("Nome: " + participante.getNome() + "/ Documento: " + participante.getDocumento());
+            System.out.println("Nome: " + participante.getNome() + "/ Documento: " + participante.getDocumento()
+            + "/ Tel: " + participante.getTelefone());
         }
         System.out.println("Qtda: " + participantes.size());
     }
 
     public void printaAllPalestrantes(){
         for(Palestrante palestrante: palestrantes){
-            System.out.println("Nome: " + palestrante.getNome() + "/ Documento: " + palestrante.getDocumento());
+            System.out.println("Nome: " + palestrante.getNome() + "/ Documento: " + palestrante.getDocumento()
+            + "/ Tel: " + palestrante.getTelefone());
         }
         System.out.println("Qtda: " + palestrantes.size());
     }
@@ -151,14 +153,14 @@ public class BancoDeDados {
 
     public void printaAllLocais(){
         for(Local local: locais){
-            System.out.println("Nome: " + local.getNome());
+            System.out.println("Nome: " + local.getNome() + "/ Rua: " + local.getRua() + "Cidade :" + local.getCidade());
         }
         System.out.println("Qtda: " + locais.size());
     }
 
     public void printaAllPalestras(){
         palestras.forEach((id, palestra) -> {
-            System.out.println("ID: " + id + "/ Nome: " + palestra.getNome());
+            System.out.println("ID: " + id + "/ Nome: " + palestra.getNome() );
         });
         System.out.println("Qtda: " + palestras.size());
     }
