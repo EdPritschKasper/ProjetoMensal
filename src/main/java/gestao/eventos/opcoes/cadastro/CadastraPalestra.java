@@ -33,7 +33,7 @@ public class CadastraPalestra extends Opcao {
         palestra.setEventoId(scanner.nextLine());
         System.out.println("Insira a descricao : ");
         palestra.setDescricao(scanner.nextLine());
-        System.out.println("Insira o tempo de inicio : "); //2025-03-06T14:30:00
+        System.out.println("Insira o tempo de inicio : " + "/ Exemplo (2025-03-06T14:30:00)"); //2025-03-06T14:30:00
         palestra.setTempoInicio(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
         System.out.println("Insira o tempo de fim : ");
         palestra.setTempoFim(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
