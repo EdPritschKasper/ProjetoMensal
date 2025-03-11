@@ -21,7 +21,7 @@ public class CaseOutros extends Opcao {
     }
 
     public void executaOpcao(){
-        int opcao = 0, opcaoPalestra = 0;
+        int opcao = 0, opcaoPalestra = 0, opcaoShow = 0;
         Scanner scanner = VariaveisGlobais.getInstancia().getScanner();
         ControleOpcoes controleOpcoes = ControleOpcoes.getInstancia();
         BancoDeDados bancoDeDados = BancoDeDados.getInstancia();
@@ -80,6 +80,35 @@ public class CaseOutros extends Opcao {
                         }
 
                     } while(opcaoPalestra != 0);
+                    break;
+                case 4:// adiciona membros do show musical
+                    System.out.println("Digite o ID do Show Musical: ");
+                    showMusical = bancoDeDados.getShowMusical(scanner.nextLine());
+
+                    System.out.println("Insira os participantes e Musicos : ");
+
+                    do{
+                        System.out.println("1 - Adicionar um Participante: ");
+                        System.out.println("2 - Adicionar um Musico: ");
+                        System.out.println("0 - Encerrar cadastro de evento: ");
+                        opcaoShow = scanner.nextInt();
+                        scanner.nextLine();
+
+                        switch(opcaoShow) {
+                            case 1:
+                                System.out.println("Digite o documento do Participante ");
+                                showMusical.adicionaParticipante(scanner.nextLine());
+                                break;
+                            case 2:
+                                System.out.println("Digite o documento do Musico ");
+                                showMusical.adicionaApresentador(scanner.nextLine());
+                                break;
+                            case 0:
+                                break;
+                        }
+
+                    } while(opcaoShow != 0);
+                    break;
                 case 0:// Sair da Opção de Exibir
                     System.out.println("Saindo do exibir");
                     break;

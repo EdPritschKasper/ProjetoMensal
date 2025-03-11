@@ -13,8 +13,8 @@ public class PreenchimentoBanco {
         // classe que preenche as entidades para fazer testes e mostrar exemplos
 
         // PESSOA
-//        Pessoa pessoa_1 = new Participante("nomePessoa", "doc", "wer");
-//        banco.adicionaPessoa(pessoa_1);
+        Pessoa pessoa_1 = new Participante("nomePessoa", "doc", "wer");
+        banco.adicionaPessoa(pessoa_1);
 
         // PARTICIPANTE
         Participante participante_1 = new Participante("Rodrigo", "965.115.388.12", "(40) 985865255");
@@ -46,22 +46,13 @@ public class PreenchimentoBanco {
         Palestra palestra_1 = new Palestra("011", "nomePalestra", "desc", time_1, time_2, local_1);
         palestra_1.adicionaApresentador("801.772.897.90");
         palestra_1.adicionaParticipante("965.115.388.12");
-//        palestra_1.adicionaParticipante("doc");
-//        palestra_1.adicionaParticipante("doc");
         banco.adicionaPalestra(palestra_1.getEventoId(), palestra_1);
 
         // SHOW MUSICAL
         ShowMusical musical_1 = new ShowMusical("012", "Rei leão", "desc", time_1, time_2, local_1);
-        musical_1.adicionaApresentador("doc");
-        musical_1.adicionaParticipante("doc");
+        musical_1.adicionaApresentador("777.897.918.80");
+        musical_1.adicionaParticipante("065.915.332.48");
         banco.adicionaShowMusical(musical_1.getEventoId(), musical_1);
 
-//        System.out.println(palestra_1.getStatusEvento());
-//        palestra_1.checaStatusEvento();
-//        System.out.println(palestra_1.getStatusEvento());
-//        palestra_1.printaAtributos();
-//        participante_1.printaAtributos();
-//        palestrante_1.printaAtributos();
-//        local_1.printaAtributos();
     }
 }

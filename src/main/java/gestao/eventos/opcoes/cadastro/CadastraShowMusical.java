@@ -34,7 +34,7 @@ public class CadastraShowMusical extends Opcao {
         showMusical.setEventoId(scanner.nextLine());
         System.out.println("Insira a descricao : ");
         showMusical.setDescricao(scanner.nextLine());
-        System.out.println("Insira o tempo de inicio : "); //2025-03-06T14:30:00
+        System.out.println("Insira o tempo de inicio :  /(2025-03-06T14:30:00)"); //2025-03-06T14:30:00
         showMusical.setTempoInicio(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
         System.out.println("Insira o tempo de fim : ");
         showMusical.setTempoFim(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
