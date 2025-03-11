@@ -22,6 +22,7 @@ public class Main {
             System.out.println("2 - Exibir");
             System.out.println("3 - Remover");
             System.out.println("4 - Alterar");
+            System.out.println("5 - Outros");
 
             System.out.println("Opção: ");
             opcao = scanner.nextInt();
@@ -41,6 +42,9 @@ public class Main {
                     break;
                 case 4: // Opção de Alterar
                     controleOpcoes.getOpcao("case altera").executaOpcao();
+                    break;
+                case 5:// Opcao Outros
+                    controleOpcoes.getOpcao("case outros").executaOpcao();
                     break;
                 case 0:
                     System.out.println("Encerrando o programa");

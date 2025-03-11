@@ -39,29 +39,6 @@ public class CadastraPalestra extends Opcao {
         palestra.setTempoFim(LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ISO_LOCAL_DATE_TIME));
         System.out.println("Insira o nome do local : ");
         palestra.setLocal(scanner.nextLine());
-        System.out.println("Insira agora os participantes e Palestrantes : ");
-
-        do{
-            System.out.println("1 - Adicionar um Participante: ");
-            System.out.println("2 - Adicionar um Palestrante: ");
-            System.out.println("0 - Encerrar cadastro de evento: ");
-            opcaoPalestra = scanner.nextInt();
-            scanner.nextLine();
-
-            switch(opcaoPalestra) {
-                case 1:
-                    System.out.println("Digite o documento do Participante ");
-                    palestra.adicionaParticipante(scanner.nextLine());
-                    break;
-                case 2:
-                    System.out.println("Digite o documento do Palestrante ");
-                    palestra.adicionaApresentador(scanner.nextLine());
-                    break;
-                case 0:
-                    break;
-            }
-
-        } while(opcaoPalestra != 0);
 
         bancoDeDados.adicionaPalestra(palestra.getEventoId(), palestra);
     }

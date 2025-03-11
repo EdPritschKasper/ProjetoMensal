@@ -56,6 +56,7 @@ public abstract class Evento implements IPrinta, IChecaEvento {
         System.out.println("Tempo Inicio: " + getTempoInicio());
         System.out.println("Tempo Fim: " + getTempoFim());
         System.out.println("Quantidade de participantes: " + participantes.size());
+        System.out.println("Status: " + getStatusEvento());
     }
 
     // metodo interface IChecaEvento

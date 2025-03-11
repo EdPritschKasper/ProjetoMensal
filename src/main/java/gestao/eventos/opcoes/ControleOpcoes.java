@@ -21,11 +21,12 @@ public class ControleOpcoes {
         opcoes.put("case exibe", CaseExibe.getInstancia());
         opcoes.put("case remove", CaseRemove.getInstancia());
         opcoes.put("case altera", CaseAltera.getInstancia());
+        opcoes.put("case outros", CaseOutros.getInstancia());
 
         // Opções de cadastro
         opcoes.put("cadastra participante", CadastraParticipante.getInstancia());
         opcoes.put("cadastra palestrante", CadastraPalestrante.getInstancia());
-        opcoes.put("cadastra musico", CadastraPalestrante.getInstancia());
+        opcoes.put("cadastra musico", CadastraMusico.getInstancia());
         opcoes.put("cadastra local", CadastraLocal.getInstancia());
         opcoes.put("cadastra palestra", CadastraPalestra.getInstancia());
         opcoes.put("cadastra show musical", CadastraShowMusical.getInstancia());
